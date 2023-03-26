@@ -5,8 +5,10 @@ import apiCall from './apiRequest.js';
 
 let handleConversion = (event) => {
   event.preventDefault();
+
   let selection = document.querySelector('select option:checked').value;
   let userInput = document.querySelector('.userValue').value;
+
   apiCall(selection, userInput);
   
 };
@@ -14,6 +16,7 @@ let handleConversion = (event) => {
 export default function displayConverted(val) {
   let answer = document.querySelector('.conversion');
   answer.value = val;
+  
   if (answer.value === "NaN") {
     answer.value = "Only enter numbers";
   }
