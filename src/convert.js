@@ -1,6 +1,8 @@
+import displayConverted from "./index.js";
+
 export default function conversion(response, selection, userInput) {
   if (selection === "cny") {
-    console.log( response.conversion_rates.CNY * userInput);
+    displayConverted(response.conversion_rates.CNY * userInput);
 
   }
 }

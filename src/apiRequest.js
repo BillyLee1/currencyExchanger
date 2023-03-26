@@ -6,8 +6,10 @@ export default function apiCall(selection, userInput) {
 
   request.addEventListener('loadend', function()  {
     const response = JSON.parse(this.responseText);
+    let answer = 0;
     if (this.status === 200) {
-      conversion(response, selection, userInput);
+      answer = conversion(response, selection, userInput);
+      return answer;
     }
   });
 

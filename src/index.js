@@ -11,6 +11,11 @@ let handleConversion = (event) => {
   
 }
 
+export default function displayConverted(val) {
+  let answer = document.querySelector('.conversion');
+  answer.value = val;
+}
+
 window.addEventListener('load', function() {
   let change = document.querySelector('.userValue');
   change.addEventListener('change', handleConversion);
