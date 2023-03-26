@@ -26,6 +26,8 @@ _This is a simple website to convert the USD currency to CNY, JPY, EUR, ZAR, KRW
 * _in gitbash, type "git clone" and then paste the link you just copied._
 * _Open the project folder in VS Code by typing "code ." into gitbash_
 * _Type "npm install" into gitbash to install all node modules_
+* _Create a .env file in the directory_
+* _Type "API_KEY=your api key" and add your API key from https://www.exchangerate-api.com_
 * _Type "npm run start" into git bash to open up the live server_
 
 ## Known Bugs
