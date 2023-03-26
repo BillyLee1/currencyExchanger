@@ -9,11 +9,14 @@ let handleConversion = (event) => {
   let userInput = document.querySelector('.userValue').value;
   apiCall(selection, userInput);
   
-}
+};
 
 export default function displayConverted(val) {
   let answer = document.querySelector('.conversion');
   answer.value = val;
+  if (answer.value === "NaN") {
+    answer.value = "Only enter numbers";
+  }
 }
 
 window.addEventListener('load', function() {

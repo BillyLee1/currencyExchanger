@@ -1,4 +1,5 @@
 import displayConverted from "./index.js";
+import displayError from "./displayError.js";
 
 export default function conversion(response, selection, userInput) {
   if (selection === "cny") {
@@ -11,5 +12,7 @@ export default function conversion(response, selection, userInput) {
     displayConverted(parseFloat(response.conversion_rates.KRW * userInput).toFixed(2));
   } else if (selection === "zar") {
     displayConverted(parseFloat(response.conversion_rates.ZAR * userInput).toFixed(2));
+  } else {
+    displayError(response);
   }
 }

@@ -1,4 +1,5 @@
 import conversion from './convert.js';
+import displayError from './displayError.js';
 
 export default function apiCall(selection, userInput) {
   let request = new XMLHttpRequest();
@@ -10,6 +11,9 @@ export default function apiCall(selection, userInput) {
     if (this.status === 200) {
       answer = conversion(response, selection, userInput);
       return answer;
+    }
+    if (response.result === "error") {
+      displayError(response);
     }
   });
 
