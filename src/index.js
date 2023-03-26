@@ -23,3 +23,8 @@ window.addEventListener('load', function() {
   let change = document.querySelector('.userValue');
   change.addEventListener('change', handleConversion);
 });
+
+window.addEventListener('load', function() {
+  let change = document.querySelector('.currency');
+  change.addEventListener('change', handleConversion);
+});

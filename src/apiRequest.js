@@ -12,6 +12,7 @@ export default function apiCall(selection, userInput) {
       answer = conversion(response, selection, userInput);
       return answer;
     }
+    
     if (response.result === "error") {
       displayError(response);
     }
